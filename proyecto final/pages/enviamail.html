@@ -1,0 +1,15 @@
+<?php
+//$mail="tomas.espinosa@hersuh.com.mx";
+$mail="g.ventas@hersuh.com.mx";
+$email=$_POST['email'];
+
+$thank="gracias.php";
+
+$message="
+Email:".$email."
+";
+
+if (mail($mail,"Nuevo mensaje",$message))
+	header("location: $thank");
+echo "correo enviado";
+?>
